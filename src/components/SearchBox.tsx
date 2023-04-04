@@ -7,7 +7,7 @@ export default function SearchBox() {
   const [search, setSearch] = useState("");
   const router = useRouter();
 
-  function handleSubmit(e) {
+  function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!search) return;
     router.push(`/search/${search}`);
